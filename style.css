@@ -1,0 +1,108 @@
+/*definit la facon dont la hauteur et la largeur total d'un élément est calculée*/
+
+* {
+    box-sizing: border-box
+}
+
+
+/*les valeurs du titre*/
+
+h1 {
+    text-align: center;
+}
+
+
+/*comprend les couleurs et le positionnement des éléments*/
+
+body {
+    background-color: rgb(250, 170, 230);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+
+/*module css qui permet de creer des mises en page en divisant l'espace d'affichage en region*/
+
+.controle {
+    display: grid;
+    grid: 2rem/repeat(2, 1fr);
+    place-items: center
+}
+
+
+/*bouton du slide*/
+
+button {
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    background: rgb(228, 141, 209)
+}
+
+
+/*comprend la position et la taille des images du carousel */
+
+.contenu-carrousel {
+    margin: 5rem auto;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px
+}
+
+
+/*l'emplacement tridimensionnel du carousel et la position absolu qui prend tout l'espace disponible*/
+
+.carrousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+
+/*l'application d'ombre porté sur les images (box-shadow),les contours avec outline(permet de definir dans une seule déclaration,plusieurs propriétés*/
+
+.carrousel div {
+    backface-visibility: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    outline: 1px solid transparent
+}
+
+
+/*ciblage des elements avec nth-child(), et la valeur du 3d*/
+
+.carrousel div:nth-child(1) {
+    transform: rotateY(0) translateZ(270px);
+    background: url(1.jpg) no-repeat center center/cover
+}
+
+.carrousel div:nth-child(2) {
+    transform: rotateY(60deg) translateZ(270px);
+    background: url(2.jpg) no-repeat center center/cover
+}
+
+.carrousel div:nth-child(3) {
+    transform: rotateY(120deg) translateZ(270px);
+    background: url(3.jpg) no-repeat center center/cover
+}
+
+.carrousel div:nth-child(4) {
+    transform: rotateY(180deg) translateZ(270px);
+    background: url(4.jpg) no-repeat center center/cover
+}
+
+.carrousel div:nth-child(5) {
+    transform: rotateY(240deg) translateZ(270px);
+    background: url(5.jpg) no-repeat center center/cover
+}
+
+.carrousel div:nth-child(6) {
+    transform: rotateY(300deg) translateZ(270px);
+    background: url(6.jpg) no-repeat center center/cover
+}
